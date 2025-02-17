@@ -1,4 +1,4 @@
-library route_names;
+library;
 
 class RoutesName {
   static const initialRoute = '/';

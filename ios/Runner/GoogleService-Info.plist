@@ -13,7 +13,7 @@
 	<key>PROJECT_ID</key>
 	<string>final-project-011x</string>
 	<key>STORAGE_BUCKET</key>
-	<string>final-project-011x.appspot.com</string>
+	<string>final-project-011x.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:994993830127:ios:b91a88c5937ac403c5831a</string>
+	<key>DATABASE_URL</key>
+	<string>https://final-project-011x-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

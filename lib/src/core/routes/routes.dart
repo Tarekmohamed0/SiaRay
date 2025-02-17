@@ -1,3 +1,3 @@
-library global;
+library;
 
 export 'names.dart';

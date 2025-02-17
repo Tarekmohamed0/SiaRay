@@ -4,10 +4,13 @@
 
 list(APPEND FLUTTER_PLUGIN_LIST
   app_links
+  battery_plus
   cloud_firestore
+  connectivity_plus
   firebase_auth
   firebase_core
   firebase_storage
+  flutter_secure_storage_windows
   url_launcher_windows
 )
 

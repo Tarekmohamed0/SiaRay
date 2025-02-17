@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import 'src/core/config/config.dart';
 import 'package:flutter/material.dart';
 import 'src/core/routes/gorouter.dart';
@@ -24,6 +26,9 @@ class RootApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (context, ch) => DismissKeyboard(
         child: MaterialApp.router(
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
+          locale: context.locale,
           routerConfig: AppRouter.router,
           theme: getApplicationTheme(),
           debugShowCheckedModeBanner: false,

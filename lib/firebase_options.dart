@@ -54,7 +54,8 @@ class DefaultFirebaseOptions {
     appId: '1:994993830127:android:bf34e84d0171761bc5831a',
     messagingSenderId: '994993830127',
     projectId: 'final-project-011x',
-    storageBucket: 'final-project-011x.appspot.com',
+    databaseURL: 'https://final-project-011x-default-rtdb.firebaseio.com',
+    storageBucket: 'final-project-011x.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
@@ -62,7 +63,8 @@ class DefaultFirebaseOptions {
     appId: '1:994993830127:ios:b91a88c5937ac403c5831a',
     messagingSenderId: '994993830127',
     projectId: 'final-project-011x',
-    storageBucket: 'final-project-011x.appspot.com',
+    databaseURL: 'https://final-project-011x-default-rtdb.firebaseio.com',
+    storageBucket: 'final-project-011x.firebasestorage.app',
     iosBundleId: 'com.example.finalProject',
   );
 }

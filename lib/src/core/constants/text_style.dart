@@ -1,4 +1,4 @@
-library text_style;
+library;
 
 import 'package:final_project/src/core/constants/constants.dart';
 import 'package:flutter/material.dart';

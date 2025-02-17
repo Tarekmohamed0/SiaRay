@@ -1,4 +1,4 @@
-library app_icons;
+library;
 
 class AppIcons {
   static const String opps = "assets/svg/opps.svg";

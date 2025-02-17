@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 class PasswordTextField extends StatelessWidget {
-  PasswordTextField({
-    Key? key,
+  const PasswordTextField({
+    super.key,
     required this.ingetText,
     this.controller,
     this.validator,
-  }) : super(key: key);
+  });
   final String ingetText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;

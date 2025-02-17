@@ -5,6 +5,7 @@ import 'package:equatable/equatable.dart';
 import 'package:logger/logger.dart';
 
 import '../../../../core/config/config.dart';
+import '../../../../core/utils/shared/shared_prefs.dart';
 import '../../../signup/data/models/user_model.dart';
 
 part 'signin_state.dart';
@@ -31,6 +32,7 @@ class SigninCubit extends Cubit<SigninState> {
     try {
       final response = await sl<SigninUsecase>().execute(email, password);
       if (response.authorisation!.token != null) {
+        await SharedPreferencesHelper.remove('auth_token');
         emit(SigninSuccess(response));
         Logger().i('Signin Success');
       } else if (response.status != null) {

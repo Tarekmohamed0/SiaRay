@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:final_project/src/core/error/network_exceptions.dart';
 import 'package:final_project/src/features/signup/data/models/user_model.dart';
 
 import '../repositories/signUp_repo.dart';

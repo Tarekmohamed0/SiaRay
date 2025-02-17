@@ -1,4 +1,4 @@
-library app_keyboard;
+library;
 
 import 'package:flutter/material.dart';
 

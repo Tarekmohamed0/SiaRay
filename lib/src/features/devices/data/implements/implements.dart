@@ -1,17 +1,14 @@
+import '../sources/sources.dart';
+import '../../domain/repositories/repositories.dart';
 
-    import '../sources/sources.dart';
-    import '../../domain/repositories/repositories.dart';
-    
-    class DevicesRepositoryImp implements DevicesRepository{
+class DevicesRepositoryImp implements DevicesRepository {
+  final DevicesRemoteDataSource remoteDataSource;
+  DevicesRepositoryImp({required this.remoteDataSource});
 
-        final DevicesRemoteDataSource remoteDataSource;
-        DevicesRepositoryImp({required this.remoteDataSource});
-      
-        // ... example ...
-        //
-        // Future<User> getUser(String userId) async {
-        //     return remoteDataSource.getUser(userId);
-        //   }
-        // ...
-    }
-    
+  // ... example ...
+  //
+  // Future<User> getUser(String userId) async {
+  //     return remoteDataSource.getUser(userId);
+  //   }
+  // ...
+}

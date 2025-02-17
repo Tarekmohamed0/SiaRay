@@ -11,7 +11,7 @@ import '../widgets/home_appbar.dart';
 import '../widgets/home_form_field.dart';
 
 class SigninScreen extends StatefulWidget {
-  SigninScreen({Key? key}) : super(key: key);
+  SigninScreen({super.key});
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   @override
@@ -29,7 +29,8 @@ class _SigninScreenState extends State<SigninScreen> {
         body: BlocListener<SigninCubit, SigninState>(
           listener: (context, state) async {
             if (state is SigninSuccess) {
-              GoRouter.of(context).go('/home', extra: state.user);
+              GoRouter.of(context).go('/MainScreen');
+              // GoRouter.of(context).go('/home', extra: state.user);
               final token = state.user.authorisation!.token;
               final prefs = await SharedPreferences.getInstance();
               await prefs.setString('auth_token', token!);
@@ -50,7 +51,10 @@ class _SigninScreenState extends State<SigninScreen> {
                   crossAxisAlignment:
                       CrossAxisAlignment.start, // Center horizontally
                   children: [
-                    const HomeAppBar(),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 30.0),
+                      child: const HomeAppBar(),
+                    ),
                     SizedBox(
                       height: 50.r,
                     ),
@@ -91,18 +95,18 @@ class _SigninScreenState extends State<SigninScreen> {
                                 password: widget._passwordController.text);
                           }
                         },
-                        child: const Text('Log In',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                            )),
                         style: ElevatedButton.styleFrom(
                           padding: const EdgeInsets.symmetric(vertical: 15),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
+                        child: const Text('Log In',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                            )),
                       ),
                     ),
                     const SizedBox(
@@ -139,8 +143,6 @@ class _SigninScreenState extends State<SigninScreen> {
                         // tow buttons for google and apple
                         ElevatedButton(
                           onPressed: () {},
-                          child: Icon(FaIcon(FontAwesomeIcons.google).icon,
-                              color: Colors.black),
                           style: ElevatedButton.styleFrom(
                             minimumSize: const Size(100, 50),
                             side:
@@ -151,14 +153,14 @@ class _SigninScreenState extends State<SigninScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
+                          child: Icon(FaIcon(FontAwesomeIcons.google).icon,
+                              color: Colors.black),
                         ),
                         const SizedBox(
                           width: 50,
                         ),
                         ElevatedButton(
                           onPressed: () {},
-                          child: Icon(FaIcon(FontAwesomeIcons.apple).icon,
-                              color: Colors.black),
                           style: ElevatedButton.styleFrom(
                             minimumSize: const Size(100, 50),
                             side:
@@ -169,6 +171,8 @@ class _SigninScreenState extends State<SigninScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                           ),
+                          child: Icon(FaIcon(FontAwesomeIcons.apple).icon,
+                              color: Colors.black),
                         ),
                       ],
                     ),

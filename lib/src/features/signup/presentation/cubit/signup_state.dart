@@ -13,13 +13,13 @@ class SignupLoading extends SignupState {}
 
 class SignupSuccess extends SignupState {
   final UserModel userModel;
-  SignupSuccess(this.userModel);
+  const SignupSuccess(this.userModel);
 }
 
 class SignupFailed extends SignupState {
   final String message;
 
-  SignupFailed(
+  const SignupFailed(
     this.message,
   );
 

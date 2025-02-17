@@ -4,7 +4,6 @@ import 'package:equatable/equatable.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../core/utils/network_checker.dart';
 import '../../../signup/data/models/user_model.dart';
 
 part 'splash_state.dart';
@@ -70,7 +69,7 @@ class SplashCubit extends Cubit<SplashState> {
         emit(AuthUnauthenticated());
         print('Invalid token: Cleared and emitted unauthenticated state.');
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       // Handle specific Dio errors for more insight
       await _clearToken();
       final errorMessage = e.response != null

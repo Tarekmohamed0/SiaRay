@@ -10,7 +10,7 @@ class RegexValidator {
   );
 
   // Method to validate email
-  static String validateEmail(String email) {
+  static String? validateEmail(String email) {
     if (email.isEmpty) {
       return 'Email cannot be empty';
     } else if (!emailRegex.hasMatch(email)) {
@@ -21,8 +21,18 @@ class RegexValidator {
       }
       return 'Invalid email format';
     }
-    return 'Valid email';
+    return null;
   }
+
+  // static String? validateEmail(String email) {
+  //   if (email.isEmpty) {
+  //     return 'Email cannot be empty';
+  //   } else if (!emailRegex.hasMatch(email)) {
+  //     return 'Invalid email format';
+  //   }
+  //   // Valid email
+  //   return null;
+  // }
 
   // Method to validate password
   static Map<String, dynamic> validatePassword(String password) {
@@ -65,5 +75,14 @@ class RegexValidator {
 
     // If all checks pass
     return {'isValid': true, 'messages': []};
+  }
+
+  static String? validatePasswordForForm(String password) {
+    final validationResult = validatePassword(password);
+    if (!validationResult['isValid']) {
+      // Combine all error messages into one string
+      return (validationResult['messages'] as List<String>).join('\n');
+    }
+    return null; // Password is valid
   }
 }

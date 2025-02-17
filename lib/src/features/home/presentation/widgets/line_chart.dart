@@ -79,7 +79,9 @@ class _LineChartSample2State extends State<LineChartSample2> {
     }
 
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      // axisSide: meta.axisSide,
+      meta: meta,
+      // axisSide: meta.axisSide,
       child: text,
     );
   }

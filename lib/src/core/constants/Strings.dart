@@ -1,5 +1,6 @@
 class AppStrings {
-  static const String appName = "Flutter Starter";
+  static const String appName = "SiaRay";
+  static const String appIcon = 'assets/icons/app_logo.svg';
   static const String appVersion = "1.0.0";
   static const String appDescription =
       "Flutter Starter is a boilerplate project for flutter that is packed with essential features and functionalities that are required to build a production ready app.";

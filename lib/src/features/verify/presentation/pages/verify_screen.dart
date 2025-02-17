@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
 class VerifyScreen extends StatelessWidget {
-  const VerifyScreen({Key? key}) : super(key: key);
+  const VerifyScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

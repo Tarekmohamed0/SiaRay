@@ -31,7 +31,7 @@ class HomeFormField extends StatelessWidget {
                 }
 
                 // Validate the email
-                String validEmail = RegexValidator.validateEmail(value);
+                String? validEmail = RegexValidator.validateEmail(value);
                 if (validEmail != 'Valid email') {
                   return validEmail; // Return the error message
                 }

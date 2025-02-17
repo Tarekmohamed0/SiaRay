@@ -1,4 +1,4 @@
-library theme;
+library;
 
 import 'package:flutter/material.dart';
 
@@ -7,11 +7,13 @@ import '../constants/constants.dart';
 ThemeData getApplicationTheme() {
   return ThemeData(
     // main colors
+    splashColor: Colors.transparent, // إزالة تأثير الضغط
+    highlightColor: Colors.transparent, // إزالة تأثير اللمس
     primaryColor: AppColor.primary,
     primaryColorLight: AppColor.secondary,
     primaryColorDark: AppColor.darkGrey,
     disabledColor: AppColor.lightGrey,
-    splashColor: AppColor.lightBlue, // ripple effect color
+
     // card view
     cardTheme: CardTheme(
       color: AppColor.white,

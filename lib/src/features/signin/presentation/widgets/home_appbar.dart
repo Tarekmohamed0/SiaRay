@@ -1,4 +1,6 @@
+import 'package:final_project/src/core/constants/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:svg_flutter/svg.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -10,29 +12,9 @@ class HomeAppBar extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          width: double.infinity,
-          child: Container(
-            margin: const EdgeInsets.only(top: 50), // Space from the top
-            height: 50,
-            width: 50,
-            decoration: const BoxDecoration(
-              shape: BoxShape.circle, // Make the container circular
-              image: DecorationImage(
-                image: NetworkImage(
-                    'https://avatars.githubusercontent.com/u/55942632?v=4'),
-              ),
-            ),
-          ),
-        ),
+            width: double.infinity,
+            child: SvgPicture.asset(AppStrings.appIcon)),
         const SizedBox(height: 10), // Space between the image and the text
-        const Text(
-          'AlterSol',
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
-        ),
       ],
     );
   }

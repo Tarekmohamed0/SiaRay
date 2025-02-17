@@ -27,13 +27,13 @@ class UserLoading extends SplashState {}
 class UserLoaded extends SplashState {
   final UserModel user;
 
-  UserLoaded(this.user);
+  const UserLoaded(this.user);
 }
 
 class UserError extends SplashState {
   final String errorMessage;
 
-  UserError(
+  const UserError(
     this.errorMessage,
   );
 }
@@ -41,7 +41,7 @@ class UserError extends SplashState {
 class AuthAuthenticated extends SplashState {
   // final UserModel user;
 
-  AuthAuthenticated();
+  const AuthAuthenticated();
 }
 
 class AuthUnauthenticated extends SplashState {}

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:final_project/src/core/constants/colors.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -238,8 +236,9 @@ class BarChartSample1State extends State<BarChartSample1> {
         break;
     }
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      // axisSide: meta.axisSide,
       space: 16,
+      meta: meta,
       child: text,
     );
   }

@@ -1,15 +1,14 @@
+import 'package:final_project/src/core/constants/Strings.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:go_router/go_router.dart';
-
-import '../cubit/splash_cubit.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:svg_flutter/svg.dart';
 
 class Onboarding1Screen extends StatelessWidget {
   const Onboarding1Screen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
@@ -20,25 +19,16 @@ class Onboarding1Screen extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    CircleAvatar(
-                      radius: 20,
-                      backgroundImage: NetworkImage(
-                          'https://avatars.githubusercontent.com/u/55942632?v=4'),
+                    SvgPicture.asset(
+                      AppStrings.appIcon,
                     ),
                     SizedBox(
                       width: 10,
                     ),
-                    Text(
-                      'AlterSol',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20),
-                    ),
                   ],
                 ),
                 SizedBox(
-                  height: 70,
+                  height: 20.h,
                 ),
                 Text('Handel the\nenergy you\nproduce',
                     style: TextStyle(

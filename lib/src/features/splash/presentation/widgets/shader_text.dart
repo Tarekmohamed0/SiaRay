@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ShaderText extends StatelessWidget {
-  ShaderText({super.key, required this.text, required this.style});
+  const ShaderText({super.key, required this.text, required this.style});
   final String text;
   final TextStyle style;
   @override

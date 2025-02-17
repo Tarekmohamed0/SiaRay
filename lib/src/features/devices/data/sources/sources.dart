@@ -1,5 +1,4 @@
- 
-    class  DevicesRemoteDataSource {
-        // Make API call to fetch data and return object.
-        // ...
-    }
+class DevicesRemoteDataSource {
+  // Make API call to fetch data and return object.
+  // ...
+}

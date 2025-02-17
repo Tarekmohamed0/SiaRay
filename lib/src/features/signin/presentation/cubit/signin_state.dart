@@ -13,11 +13,11 @@ class SigninLoading extends SigninState {}
 
 class SigninSuccess extends SigninState {
   final UserModel user;
-  SigninSuccess(this.user);
+  const SigninSuccess(this.user);
 }
 
 class SigninFailed extends SigninState {
   final String message;
 
-  SigninFailed(this.message);
+  const SigninFailed(this.message);
 }
