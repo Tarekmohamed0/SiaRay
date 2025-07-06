@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCheEbZaWWplS_obRABncYP4siTTfzl4kE',
-    appId: '1:994993830127:android:bf34e84d0171761bc5831a',
+    appId: '1:994993830127:android:43c5cd2e7118a50fc5831a',
     messagingSenderId: '994993830127',
     projectId: 'final-project-011x',
     databaseURL: 'https://final-project-011x-default-rtdb.firebaseio.com',
@@ -67,4 +67,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'final-project-011x.firebasestorage.app',
     iosBundleId: 'com.example.finalProject',
   );
+
 }

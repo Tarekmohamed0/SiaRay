@@ -16,6 +16,18 @@ class SigninSuccess extends SigninState {
   const SigninSuccess(this.user);
 }
 
+class LogoutSuccess extends SigninState {
+  final String message;
+  const LogoutSuccess(this.message);
+}
+
+class LogoutFailed extends SigninState {
+  final String message;
+  const LogoutFailed(this.message);
+}
+
+class LogoutLoading extends SigninState {}
+
 class SigninFailed extends SigninState {
   final String message;
 

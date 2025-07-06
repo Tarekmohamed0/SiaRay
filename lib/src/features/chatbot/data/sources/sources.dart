@@ -1,5 +1,4 @@
- 
-    class  ChatbotRemoteDataSource {
-        // Make API call to fetch data and return object.
-        // ...
-    }
+class ChatbotRemoteDataSource {
+  // Make API call to fetch data and return object.
+  // ...
+}

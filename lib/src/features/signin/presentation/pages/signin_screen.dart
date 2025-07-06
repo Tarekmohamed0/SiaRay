@@ -31,9 +31,10 @@ class _SigninScreenState extends State<SigninScreen> {
             if (state is SigninSuccess) {
               GoRouter.of(context).go('/MainScreen');
               // GoRouter.of(context).go('/home', extra: state.user);
-              final token = state.user.authorisation!.token;
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.setString('auth_token', token!);
+              // final token = state.user.authorisation!.token;
+              // final prefs = await SharedPreferences.getInstance();
+              // final userToken = await prefs.setString('auth_token', token!);
+              // print(userToken);
             } else if (state is SigninFailed) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(

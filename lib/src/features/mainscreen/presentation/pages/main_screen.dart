@@ -1,5 +1,7 @@
 import 'package:final_project/src/features/chatbot/presentation/pages/chat_bot_screen.dart';
+import 'package:final_project/src/features/home/data/implements/home_repo_impl.dart';
 import 'package:final_project/src/features/home/domain/usecases/get_batteries_uscase.dart';
+import 'package:final_project/src/features/home/domain/usecases/get_energy_reading_usecase.dart';
 import 'package:final_project/src/features/home/presentation/cubit/home_cubit.dart';
 import 'package:final_project/src/features/static_screen/presentation/pages/static_screen.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +10,7 @@ import 'package:svg_flutter/svg_flutter.dart';
 
 import '../../../../core/config/injection.dart';
 import '../../../devices/presentation/pages/devices_screen.dart';
+import '../../../devices/presentation/pages/my_devices.dart';
 import '../../../home/presentation/pages/home_screen.dart';
 import '../../../panels/presentation/pages/panels_screen.dart';
 
@@ -36,7 +39,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     StaticScreen(),
     PanelsScreen(),
-    DevicesScreen(),
+    MyDevices(),
     ChatBotScreen(),
     // StaticScreen(),
     // SettingsScreen(),
@@ -45,8 +48,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) =>
-          HomeCubit(getBatteriesUscase: sl<GetBatteriesUscase>()),
+      create: (context) => sl<HomeCubit>(),
       child: Scaffold(
         backgroundColor: Colors.white,
         bottomNavigationBar: BottomNavigationBar(
@@ -67,7 +69,7 @@ class _MainScreenState extends State<MainScreen> {
                     label: bottombaritems[index]['label']);
               })
             ]),
-        body: screens[currentIndex],
+        body: IndexedStack(index: currentIndex, children: screens),
       ),
     );
   }

@@ -1,8 +1,7 @@
-// import freezed
 import 'dart:io';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-// import dio
+
 import 'package:dio/dio.dart';
 
 import 'error_model.dart';

@@ -11,6 +11,17 @@ class HomeInitial extends HomeState {}
 
 class HomeLoading extends HomeState {}
 
+class HomeGetEnergyReadingLoading extends HomeState {}
+
+class HomeGetEnergyReadingLoaded extends HomeState {
+  final EnergyReadingResponse energyReadingResponse;
+
+  const HomeGetEnergyReadingLoaded(this.energyReadingResponse);
+
+  @override
+  List<Object> get props => [energyReadingResponse];
+}
+
 class HomeLoaded extends HomeState {
   final Batteries batteries;
 

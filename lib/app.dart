@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:final_project/main.dart';
 
 import 'src/core/config/config.dart';
 import 'package:flutter/material.dart';

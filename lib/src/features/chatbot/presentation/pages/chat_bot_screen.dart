@@ -49,6 +49,7 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
       setState(() {
         _messages.removeLast();
       });
+      // ignore: use_build_context_synchronously
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Failed to get response')),
       );

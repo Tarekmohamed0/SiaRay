@@ -4,6 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:geekyants_flutter_gauges/geekyants_flutter_gauges.dart'
     as geekyants;
 import 'package:geekyants_flutter_gauges/geekyants_flutter_gauges.dart';
+import 'package:go_router/go_router.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart' hide LinearEdgeStyle;
 
@@ -69,7 +70,11 @@ class PanelInfoScreen extends StatelessWidget {
                     color: Colors.black,
                     fontSize: 16,
                     fontWeight: FontWeight.w600)),
+            SizedBox(
+              height: 10.h,
+            ),
             Container(
+              padding: EdgeInsets.all(11),
               height: 109.h,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -181,7 +186,7 @@ class PanelInfoScreen extends StatelessWidget {
               height: 20.h,
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              padding: EdgeInsets.symmetric(horizontal: 11, vertical: 11),
               height: 120.h,
               decoration: BoxDecoration(
                   color: Colors.white, borderRadius: BorderRadius.circular(10)),
@@ -320,46 +325,51 @@ class PanelInfoScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
-                  height: 70,
-                  width: 186,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                        height: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(50))),
-                        width: 40,
-                        child: Icon(
-                          Icons.battery_0_bar,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            '75Kwh',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.w400),
+                GestureDetector(
+                  onTap: () {
+                    GoRouter.of(context).push('/BatteryScreen');
+                  },
+                  child: Container(
+                    padding: EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                    height: 70,
+                    width: 186,
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 40,
+                          decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(50))),
+                          width: 40,
+                          child: Icon(
+                            Icons.battery_0_bar,
+                            color: Colors.white,
                           ),
-                          Text(
-                            'saving in battery',
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 10.sp,
-                                fontWeight: FontWeight.w400),
-                          )
-                        ],
-                      )
-                    ],
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              '75Kwh',
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.w400),
+                            ),
+                            Text(
+                              'saving in battery',
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10.sp,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 )
               ],
@@ -416,7 +426,6 @@ class PanelInfoScreen extends StatelessWidget {
 //   }
 // }
 
-
 // import 'package:flutter/material.dart';
 // import 'package:geekyants_flutter_gauges/geekyants_flutter_gauges.dart';
 
@@ -452,7 +461,7 @@ class PanelInfoScreen extends StatelessWidget {
 //         mainAxisAlignment: MainAxisAlignment.center,
 //         crossAxisAlignment: CrossAxisAlignment.center,
 //         children: [
-         
+
 //           const SizedBox(height: 8),
 //           LinearGauge(
 //             extendLinearGauge: 0,

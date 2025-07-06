@@ -5,7 +5,7 @@ import '../../data/models/batteries/batteries.dart';
 import '../repositories/get_batteries_repo.dart';
 
 class GetBatteriesUscase {
-  final GetBatteriesRepo repository;
+  final HomeRepository repository;
 
   GetBatteriesUscase({required this.repository});
 

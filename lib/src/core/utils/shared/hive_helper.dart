@@ -9,10 +9,10 @@ class HiveHelper<T> {
 
   /// فتح الـ Box
   Future<Box<T>> openBox() async {
-    if (!Hive.isBoxOpen(boxName)) {
-      return await Hive.openBox<T>(boxName);
+    if (Hive.isBoxOpen(boxName)) {
+      return Hive.box<T>(boxName);
     }
-    return Hive.box<T>(boxName);
+    return await Hive.openBox<T>(boxName);
   }
 
 // to listen to changes in the box and update the UI accordingly

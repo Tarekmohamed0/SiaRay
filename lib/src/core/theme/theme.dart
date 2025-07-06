@@ -15,7 +15,7 @@ ThemeData getApplicationTheme() {
     disabledColor: AppColor.lightGrey,
 
     // card view
-    cardTheme: CardTheme(
+    cardTheme: CardThemeData(
       color: AppColor.white,
       shadowColor: AppColor.black,
       elevation: AppSize.s4,

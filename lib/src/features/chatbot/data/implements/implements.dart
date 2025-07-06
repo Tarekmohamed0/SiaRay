@@ -1,17 +1,14 @@
+import '../sources/sources.dart';
+import '../../domain/repositories/repositories.dart';
 
-    import '../sources/sources.dart';
-    import '../../domain/repositories/repositories.dart';
-    
-    class ChatbotRepositoryImp implements ChatbotRepository{
+class ChatbotRepositoryImp implements ChatbotRepository {
+  final ChatbotRemoteDataSource remoteDataSource;
+  ChatbotRepositoryImp({required this.remoteDataSource});
 
-        final ChatbotRemoteDataSource remoteDataSource;
-        ChatbotRepositoryImp({required this.remoteDataSource});
-      
-        // ... example ...
-        //
-        // Future<User> getUser(String userId) async {
-        //     return remoteDataSource.getUser(userId);
-        //   }
-        // ...
-    }
-    
+  // ... example ...
+  //
+  // Future<User> getUser(String userId) async {
+  //     return remoteDataSource.getUser(userId);
+  //   }
+  // ...
+}
