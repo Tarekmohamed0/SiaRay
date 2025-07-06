@@ -19,7 +19,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../error_screen.dart';
-import '../../../testt.dart';
 import '../../features/battery/presentation/pages/battery_screen.dart';
 import '../../features/devices/presentation/pages/add_new_device.dart';
 import '../../features/devices/presentation/pages/devices_screen.dart';
@@ -162,11 +161,6 @@ class AppRouter {
         path: '/BatteryScreen',
         name: 'BatteryScreen',
         builder: (context, state) => BatteryScreen(),
-      ),
-      GoRoute(
-        path: '/Testt',
-        name: 'Testt',
-        builder: (context, state) => const Testt(),
       ),
       GoRoute(
         path: '/SigninScreen',
